@@ -1,22 +1,41 @@
 ﻿
+
 namespace LigaBasquetbol;
 
 public class Program
 {
     public static Escuela Organizador { get; set; } = new();
+    public static Torneo Torneo { get; set; } = new();
+    public static List<Equipo> Equipos { get; set; } = new();
     public static void Main(string[] args)
     {
         // definir la escuela organizadora
         definirOrganizador();
-        // definir 5 escuelas mas
-        // definir el torneo
+        // definir el torneo y
         // asignar el organizador de torneo
+        definirTorneo();
         // definir 6 equipos
+        definirEquipos();
+        // definir las escuelas para cada equipo
         // cada equipo corresponde a una escuela
         // por cada equipo debe haber un entrenador
         // por cada equipo debe haber al menos 5 jugadores
         // definir los partidos, uno con cada contrincante
         // definir el rol y asignar los partidos
+    }
+
+    private static void definirEquipos()
+    {
+        throw new NotImplementedException();
+    }
+
+    private static void definirTorneo()
+    {
+        Torneo.Categoría = "15-17";
+        Torneo.Edición = "Profe Medardo";
+        Torneo.Inicio = new DateTime(2024, 02, 06);
+        Torneo.Fin = new DateTime(2024, 06, 15);
+        Torneo.Organizador = Organizador;
     }
 
     private static void definirOrganizador()
@@ -29,22 +48,9 @@ public class Program
 
 
 
-// Definir un nuevo torneo
-var torneo1 = new Torneo();
-torneo1.Categoría = "15-17";
-torneo1.Edición = "Profe Medardo";
-torneo1.Inicio = new DateTime(2024,02,06);
-torneo1.Fin = new DateTime(2024,06,15);
 
-// definir la escuela organizadora
-var cetis108 = new Escuela
-{
-    Nombre = "CETis108",
-    Cct = "25DCT0108H",
-    Director = "Marisela Beltrán"
-};
 
-torneo1.Organizador = cetis108;
+
 // inicializar la lista de equipos del torneo
 torneo1.Equipos = new List<Equipo>();
 
