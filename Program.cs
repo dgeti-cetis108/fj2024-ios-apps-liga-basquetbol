@@ -26,7 +26,28 @@ public class Program
 
     private static void definirEquipos()
     {
-        throw new NotImplementedException();
+        Equipos.Add(new Equipo
+        {
+            Nombre = "Jaguares del CETis108",
+            Rama = Rama.Mixta,
+            Entrenador = new Entrenador
+            {
+                Nombres = "Pinky",
+                Apellidos = "y Cerebro",
+                Edad = 41,
+                TorneosParticipando = 12,
+                TorneosGanados = 6
+            },
+            Escuela = Organizador,
+            Jugadores = new List<Jugador>
+            {
+                new Jugador { Nombres="Renato", Apellidos="Baez", Número=1},
+                new Jugador { Nombres="Ramy", Apellidos="Jabur", Número=2},
+                new Jugador { Nombres="Michelle", Apellidos="Luque", Número=23},
+                new Jugador { Nombres="Paulina", Apellidos="Guevara", Número=32},
+                new Jugador { Nombres="Antonio", Apellidos="Rodriguez", Número=11}
+            }
+        });
     }
 
     private static void definirTorneo()
@@ -46,75 +67,6 @@ public class Program
     }
 }
 
-
-
-
-
-
-// inicializar la lista de equipos del torneo
-torneo1.Equipos = new List<Equipo>();
-
-// definir el entrenador del cetis
-var entrenadorCetis = new Entrenador
-{
-    Nombres = "Pinky",
-    Apellidos = "y Cerebro",
-    Edad = 41,
-    TorneosParticipando = 12,
-    TorneosGanados = 6
-};
-
-// definir los jugadores del cetis
-var jugadorCetis1 = new Jugador
-{
-    Nombres = "Renato",
-    Apellidos = "Baez",
-    Número = 8
-};
-
-var jugadorCetis2 = new Jugador
-{
-    Nombres = "Ramy",
-    Apellidos = "Jabur",
-    Número = 9
-};
-
-var jugadorCetis3 = new Jugador
-{
-    Nombres = "Antonio",
-    Apellidos = "Rodriguez",
-    Número = 19
-};
-
-var jugadorCetis4 = new Jugador
-{
-    Nombres = "Michelle",
-    Apellidos = "Luque",
-    Número = 23
-};
-
-var jugadorCetis5 = new Jugador
-{
-    Nombres = "Paulina",
-    Apellidos = "Guevara",
-    Número = 2
-};
-
-// definir un equipo, cetis108
-var equipoCetis = new Equipo
-{
-    Nombre = "Jaguares del CETis108",
-    Rama = Rama.Mixta,
-    Entrenador = entrenadorCetis,
-    Escuela = cetis108,
-    Jugadores = new List<Jugador>()
-};
-
-equipoCetis.Jugadores.Add(jugadorCetis1);
-equipoCetis.Jugadores.Add(jugadorCetis2);
-equipoCetis.Jugadores.Add(jugadorCetis3);
-equipoCetis.Jugadores.Add(jugadorCetis4);
-equipoCetis.Jugadores.Add(jugadorCetis5);
 
 // TODO: crear un segundo equipo con 5 jugadores
 
